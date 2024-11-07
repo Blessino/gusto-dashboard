@@ -1,0 +1,15 @@
+.aside__list {
+  padding-top: 1em;
+  list-style: none;
+}
+
+.aside__list-label{
+   font-size: 0.9rem;
+   padding-left:0.5em ;
+}
+
+.aside__list-item{
+    padding: 0.5em 1em;
+    
+}
+

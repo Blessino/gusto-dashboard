@@ -1,5 +1,13 @@
+:root{
+  --link-active: #43bee1;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+ul li, a {
+  text-decoration: none;
 }
