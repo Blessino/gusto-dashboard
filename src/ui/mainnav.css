@@ -1,0 +1,19 @@
+
+
+.nav {
+ position: sticky;
+ overflow-y: scroll;
+ height: 100vh;
+}
+
+.nav__list-label{
+   font-size: 0.9rem;
+
+   
+}
+
+.nav__list-item{
+    padding: 0.5em 1em;
+    
+}
+

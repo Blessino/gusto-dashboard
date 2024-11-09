@@ -1,13 +1,17 @@
 import React from "react";
 import Logo from "../ui/Logo";
-import SideMenu from "./SideMenu";
+import MainNav from "./mainNav";
 
 function Sidebar() {
   return (
-    <div>
-      <Logo />
-      <SideMenu />
-    </div>
+    <>
+      <aside>
+        <figure>
+          <Logo />
+        </figure>
+        <MainNav />
+      </aside>
+    </>
   );
 }
 
