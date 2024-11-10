@@ -1,19 +1,22 @@
 
-
 .nav {
- position: sticky;
+ /* position: fixed; */
  overflow-y: scroll;
- height: 100vh;
+ height:80vh ;
 }
 
 .nav__list-label{
    font-size: 0.9rem;
-
-   
 }
 
 .nav__list-item{
     padding: 0.5em 1em;
     
+}
+
+.nav__list-item:hover{
+    background: var(--link-hover);
+    cursor: pointer;
+    border-radius: 5px;
 }
 

@@ -1,4 +1,18 @@
-.fig__logo{
-    
-    padding: 1em;
+
+ img{
+    width: 100%;
+    height:100%;
 }
+
+.fig__logo-nav{
+    padding:0.5em 2em 2em;
+    width: 210px;
+    height: 100px;
+}
+
+
+.fig__logo-head{
+    width: 100px;
+    height: 40px;
+}
+

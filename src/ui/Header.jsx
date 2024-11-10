@@ -1,5 +1,6 @@
 import Logo from "../ui/Logo";
 import "./header.css";
+import "./logo.css"
 
 function Header() {
   return (
@@ -13,7 +14,7 @@ function Header() {
             <option value="english">en</option>
           </select>
         </a>
-        <figure className="header__figure-logo">
+        <figure className="fig__logo-head">
           <Logo />
         </figure>
       </div>

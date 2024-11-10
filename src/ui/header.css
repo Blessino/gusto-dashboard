@@ -6,15 +6,6 @@ header{
     justify-content: end;
     align-items: center;
     gap: 2.5rem;
-
+    padding: 0.5em;
 }
 
-.header__figure-logo{
-    width: 100px;
-    height: 40px;
-}
-
-.header__figure-logo img{
-    width: 100%;
-    height:100%;
-}

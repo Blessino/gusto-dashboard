@@ -1,5 +1,6 @@
 :root{
   --link-active: #43bee1;
+  --link-hover: #b6e3f0;
 }
 
 *{
@@ -8,6 +9,28 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: Nunito, sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  /* color: #6c757d; */
+  text-align: left;
+  background-color: #ffffff;
+}
+
 ul li, a {
   text-decoration: none;
+  color: #6c757d;
+
+}
+
+::-webkit-scrollbar{
+  width:4px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(218, 218, 218);
+  border-radius: 10px;
+  
 }
