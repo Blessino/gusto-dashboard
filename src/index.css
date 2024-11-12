@@ -17,6 +17,10 @@ body{
   /* color: #6c757d; */
   text-align: left;
   background-color: #ffffff;
+
+  width: 98%;
+  min-width: 1240px;
+
 }
 
 ul li, a {
@@ -25,12 +29,3 @@ ul li, a {
 
 }
 
-::-webkit-scrollbar{
-  width:4px;
-}
-
-::-webkit-scrollbar-thumb{
-  background: rgb(218, 218, 218);
-  border-radius: 10px;
-  
-}

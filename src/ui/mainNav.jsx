@@ -53,7 +53,7 @@ function MainNav() {
             <li key={item.title} className="nav__list-item">
               <span className="nav__icon">{item.icon}</span>
               <NavLink to={item.title}>
-                <span>{item.title}</span>
+                <span className="nav__item-title">{item.title}</span>
               </NavLink>
             </li>
           );
