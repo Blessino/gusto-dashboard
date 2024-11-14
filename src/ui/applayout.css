@@ -1,8 +1,6 @@
 .main__layout {
   display: grid;
   grid-template-columns: 15rem 1fr;
-  /* width: 100%;
-  min-width: 1320px; */
 }
 
 .main__layout-menu {

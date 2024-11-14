@@ -9,8 +9,7 @@
 
 
 ::-webkit-scrollbar{
-  width:4px;
- 
+  width:4px; 
 }
 
 ::-webkit-scrollbar-thumb{
@@ -19,10 +18,18 @@
 }
 
 .nav__list-label{
-   font-size: 0.9rem;
+   font-size: 0.69rem;
+   font-weight: 300;
+   color: #0a0a0a;
+   text-transform: uppercase;
 }
 
 .nav__list-item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5em;
+  
     list-style: none;
     padding: 0.5em 1em;
     margin: 0.5em 1em;
@@ -30,16 +37,29 @@
     transition-duration: 0.2s;
     transition-timing-function: ease; */
     transition: all 0.2s ease;
+
     
 }
 
+
 .nav__list-item:hover{
-    
-    color: red;
-    background: var(--link-hover);
-    cursor: pointer;
-    border-radius: 5px;
-    transform: translate(5px);
+  
+  transform: translate(5px);
+  background: var(--link-hover);
+  color: var(--link-hover);
+  cursor: pointer;
+  border-radius: 5px;
   
 }
 
+
+.nav__icon{
+  /* display: flex; */
+  width: 20px;
+  height: 20px;
+}
+.nav__icon span{
+  display: flex;
+  width: 20px;
+  height: 20px;
+}

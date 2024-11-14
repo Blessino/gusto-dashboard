@@ -6,6 +6,7 @@ import { Booking } from "./data/MenuData";
 function App() {
   return (
     <div>
+      
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>

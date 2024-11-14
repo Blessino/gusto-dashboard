@@ -1,11 +1,29 @@
-header{
- 
-}
 .header{
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 2.5rem;
     padding: 0.5em;
+
+}
+
+.header a{
+        transition: all 0.3s ease-in;
+        /* margin-left: 20px; */
+}
+
+.header a:hover{
+    text-decoration: underline;
+    color: var(--link-active);
+}
+
+.header__icon img{
+    width: 10px;
+    height: 10px;
+    
+}
+
+.header__icon img:hover{
+    color: var(--link-active);
 }
 

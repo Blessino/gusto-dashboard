@@ -1,114 +1,116 @@
-// import Dashboard from "../ui/Dashboard";
-
 export const Booking = [
   {
     title: "Dashboard",
-    icon: "",
+    icon: "./public/dashboard.png",
   },
   {
     title: "booking",
-    icon: "",
+    icon: "./public/businessman.png",
   },
   {
     title: "Groccery Stores",
-    icon: "",
+    icon: "./public/shopping-bag.png",
   },
   {
     title: "Accounting",
-    icon: "",
+    icon: "./public/budget.png",
   },
 
   {
     title: "Subscription",
-    icon: "",
+    icon: "./public/user-add.png",
   },
   {
     title: "Customers",
-    icon: "",
+    icon: "./public/people.png",
   },
   {
     title: "Report",
-    icon: "",
+    icon: "./public/statisctics.png",
   },
   {
     title: "Admin Services Area",
-    icon: "",
+    icon: "./public/people.png",
   },
   {
     title: "Chat",
-    icon: "",
+    icon: "./public/cloud.png",
   },
 ];
 
 export const Settings = [
   {
     title: "Profile",
-    icon: "",
+    icon: "./public/user.png",
   },
   {
     title: "Customize",
-    icon: "",
+    icon: "./public/school-material.png",
   },
   {
     title: "Styling",
-    icon: "",
+    icon: "./public/brush.png",
   },
   {
     title: "CMS",
-    icon: "",
+    icon: "./public/computer.png",
   },
   {
     title: "Catalog",
-    icon: "",
+    icon: "./public/catalogue.png",
   },
   {
     title: "Configurations",
-    icon: "",
+    icon: "./public/settings-config.png",
   },
   {
     title: "Tax",
-    icon: "",
+    icon: "./public/tax-free.png",
   },
   {
     title: "Payment Options",
-    icon: "",
+    icon: "./public/payment.png",
   },
   {
     title: "Manage Delivery",
-    icon: "",
+    icon: "./public/delivery.png",
+  },
+  {
+    title: "Manage Roles",
+    icon: "./public/user.png",
   },
   {
     title: "Cache Contorls",
-    icon: "",
+    icon: "./public/user.png",
   },
 ];
 
 export const Marketing = [
   {
     title: "Banners",
-    icon: "",
+    icon: "./public/brush.png",
   },
   {
     title: "Promo Code",
-    icon: "",
+    icon: "./public/promo-code.png",
   },
   {
     title: "Loyality Card",
-    icon: "",
+    icon: "./public/card.png",
   },
   {
     title: "Campaing",
-    icon: "",
+    icon: "./public/star.png",
   },
 ];
 
 export const Extra = [
   {
     title: "Tools",
-    icon: "",
+    icon: "./public/setting.png",
   },
   {
     title: "DB Aduit Logs",
-    icon: "",
+    icon: "./public/tax-free.png",
   },
 ];
