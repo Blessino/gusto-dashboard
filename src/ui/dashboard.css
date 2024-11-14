@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px;
+    flex-wrap: wrap;
+    
 }
 
-.pi{
+.pi-icon{
     padding: 12px;
     color: #fff;
     background-color: var(--link-active);
@@ -13,4 +14,11 @@
     border-radius: 5px;
     margin-right: 5px;
 }
+
+.card__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 

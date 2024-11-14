@@ -1,9 +1,33 @@
-.card-body{
-
+.card-body {
+  font-weight: 400;
+  padding: 1em;
+  margin-top: 1em;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-.card-body img{
-    display: block;
-    width: 5px;
-    height: 5px;
+.card-icon {
+  padding: 10px;
+  color: #fff;
+  background-color: var(--link-active);
+}
+
+.card-icon img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.card-count{
+  font-size: 2em;
+  font-weight: 200;
+  padding: 20px 0;
+}
+
+.card-report span{
+  color: red;
 }
