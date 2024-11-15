@@ -1,18 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Booking, Settings, Marketing, Extra } from "../data/MenuData";
-import Dashboard from "./Dashboard";
-import "../ui/mainnav.css"
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Booking, Settings, Marketing, Extra } from '../data/MenuData';
+import '../ui/mainnav.css';
 //
 function MainNav() {
   return (
-    <nav className="nav">
+    <nav className="scrollbar-thin scrollbar-thumb-{#9ca3af} h-[80vh] overflow-y-scroll scroll-smooth">
       <ul className="nav__list">
         <label className="nav__list-label">Booking</label>
         {Booking.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">< img src={item.icon} alt={item.title}/></span>
+              <span className="nav__icon">
+                <img src={item.icon} alt={item.title} />
+              </span>
               <NavLink to={item.title}>
                 <span className="nav__list-title">{item.title}</span>
               </NavLink>
@@ -25,7 +26,9 @@ function MainNav() {
         {Settings.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">< img src={item.icon} alt={item.title}/></span>
+              <span className="nav__icon">
+                <img src={item.icon} alt={item.title} />
+              </span>
               <NavLink to={item.title}>
                 <span>{item.title}</span>
               </NavLink>
@@ -38,7 +41,9 @@ function MainNav() {
         {Marketing.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">< img src={item.icon} alt={item.title}/></span>
+              <span className="nav__icon">
+                <img src={item.icon} alt={item.title} />
+              </span>
               <NavLink to={item.title}>
                 <span>{item.title}</span>
               </NavLink>
@@ -51,7 +56,9 @@ function MainNav() {
         {Extra.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">< img src={item.icon} alt={item.title}/></span>
+              <span className="nav__icon">
+                <img src={item.icon} alt={item.title} />
+              </span>
               <NavLink to={item.title}>
                 <span className="nav__item-title">{item.title}</span>
               </NavLink>
