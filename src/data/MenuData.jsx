@@ -4,7 +4,7 @@ export const Booking = [
     icon: "./public/dashboard.png",
   },
   {
-    title: "booking",
+    title: "Order",
     icon: "./public/businessman.png",
   },
   {
