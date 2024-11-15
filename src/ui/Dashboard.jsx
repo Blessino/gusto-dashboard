@@ -1,5 +1,5 @@
 import Calender from "./Calender";
-import Card from "./card";
+import Card from "./Card";
 import "./dashboard.css";
 
 function Dashboard() {
