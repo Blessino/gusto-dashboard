@@ -1,7 +1,7 @@
 export const Booking = [
   {
     title: 'Dashboard',
-    icon: 'https://www.flaticon.com/free-icon/star_7838177?term=star+person&page=1&position=5&origin=search&related_id=7838177',
+    icon: 'https://www.flaticon.com/free-icon/star_7838177?term=star+person&page=1&position=5&origin=search&related_id=7838177' ,
   },
   {
     title: 'Order',
