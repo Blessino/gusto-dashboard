@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./calender.css"
+// import "./calender.css"
 import { Calendar } from "primereact/calendar";
 
 export default function Calender() {
@@ -7,7 +7,7 @@ export default function Calender() {
 
   return (
     <>
-      <Calendar className="calender" />
+      <Calendar className="calender bg-slate-800 text-slate-500 w-5" />
     </>
   );
 }
