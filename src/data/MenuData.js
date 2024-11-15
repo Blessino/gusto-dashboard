@@ -1,40 +1,40 @@
 export const Booking = [
   {
-    title: "Dashboard",
-    icon: "/public/dashboard.png",
+    title: 'Dashboard',
+    icon: 'https://www.flaticon.com/free-icon/star_7838177?term=star+person&page=1&position=5&origin=search&related_id=7838177',
   },
   {
-    title: "Order",
-    icon: "/public/businessman.png",
+    title: 'Order',
+    icon: '/public/businessman.png',
   },
   {
-    title: "Groccery Stores",
-    icon: "/public/shopping-bag.png",
+    title: 'Groccery Stores',
+    icon: '/public/shopping-bag.png',
   },
   {
-    title: "Accounting",
-    icon: "/public/budget.png",
+    title: 'Accounting',
+    icon: '/public/budget.png',
   },
 
   {
-    title: "Subscription",
-    icon: "/public/user-add.png",
+    title: 'Subscription',
+    icon: '/public/user-add.png',
   },
   {
-    title: "Customers",
-    icon: "/public/people.png",
+    title: 'Customers',
+    icon: '/public/people.png',
   },
   {
-    title: "Report",
-    icon: "/public/statisctics.png",
+    title: 'Report',
+    icon: '/public/statisctics.png',
   },
   {
-    title: "Admin Services Area",
-    icon: "/public/people.png",
+    title: 'Admin Services Area',
+    icon: '/public/people.png',
   },
   {
-    title: "Chat",
-    icon: "/public/cloud.png",
+    title: 'Chat',
+    icon: '/public/cloud.png',
   },
 ];
 
@@ -114,3 +114,4 @@ export const Extra = [
     icon: "/public/tax-free.png",
   },
 ];
+
