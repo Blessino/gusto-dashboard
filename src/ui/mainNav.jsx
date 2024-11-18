@@ -11,10 +11,10 @@ function MainNav() {
         {Booking.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">
-                <img src={item.icon} alt={item.title} />
-              </span>
               <NavLink to={item.title}>
+                {/* <span className="nav__icon">
+                  <img src={item.icon} alt={item.title} />
+                </span> */}
                 <span className="nav__list-title">{item.title}</span>
               </NavLink>
             </li>
@@ -26,10 +26,10 @@ function MainNav() {
         {Settings.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">
-                <img src={item.icon} alt={item.title} />
-              </span>
               <NavLink to={item.title}>
+                {/* <span className="nav__icon">
+                <img src={item.icon} alt={item.title} />
+              </span> */}
                 <span>{item.title}</span>
               </NavLink>
             </li>
@@ -41,10 +41,10 @@ function MainNav() {
         {Marketing.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">
-                <img src={item.icon} alt={item.title} />
-              </span>
               <NavLink to={item.title}>
+                {/* <span className="nav__icon">
+                  <img src={item.icon} alt={item.title} />
+                </span> */}
                 <span>{item.title}</span>
               </NavLink>
             </li>
@@ -56,10 +56,10 @@ function MainNav() {
         {Extra.map((item) => {
           return (
             <li key={item.title} className="nav__list-item">
-              <span className="nav__icon">
-                <img src={item.icon} alt={item.title} />
-              </span>
               <NavLink to={item.title}>
+                {/* <span className="nav__icon">
+                  <img src={item.icon} alt={item.title} />
+                </span> */}
                 <span className="nav__item-title">{item.title}</span>
               </NavLink>
             </li>
