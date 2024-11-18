@@ -1,18 +1,16 @@
-import { Outlet } from "react-router-dom";
-import Dashboard from "./Dashboard";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import "./applayout.css";
+import { Outlet } from 'react-router-dom';
+import Header from './Header';
+import Sidebar from './Sidebar';
 
 function AppLayout() {
   return (
     <>
-      <main className="main__layout">
-        <div className="main__layout-menu">
+      <main className="grid grid-cols-[15rem_1fr] gap-4">
+        <div className="p-4 ">
           <Sidebar />
         </div>
-        <div className="main__layout-page">
-        <Header />
+        <div className="p-4">
+          <Header />
           <Outlet />
         </div>
       </main>
