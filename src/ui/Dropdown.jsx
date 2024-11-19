@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "../ui/dropdown.css";
-import { HiChevronDown } from "react-icons/hi2";
+import React, { useState } from 'react';
+// import "../ui/dropdown.css";
+import { HiChevronDown } from 'react-icons/hi2';
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,13 +10,15 @@ function Dropdown() {
   };
 
   return (
-    <div className="dropdown">
-      <button onClick={toggleDropdown} className="dropdown-toggle">
-        en <HiChevronDown />
+    <div className="relative inline-block">
+      <button onClick={toggleDropdown} className="flex items-center justify-center cursor-pointer px-3 py-1">
+        <p>en</p> <HiChevronDown />
       </button>
       {isOpen && (
-        <ul className="dropdown-menu">
-          <li className="dropdown-item">English</li>
+        <ul className="absolute right-0 z-10 block w-20 bg-white shadow-lg">
+          <li className="cursor-pointer list-none p-1.5 text-center transition-all duration-300 ease-in-out hover:bg-gray-200">
+            English
+          </li>
         </ul>
       )}
     </div>

@@ -26,9 +26,12 @@ function Header() {
           </span>
           pickup & delivery Dashboard
         </a>
-        <a href="#" className=" flex items-center justify-between gap-1 hover:text-teal-400">
-          Language
-          <Dropdown /> 
+        <a
+          href="#"
+          className="flex items-center justify-between gap-1 hover:text-teal-400"
+        >
+          <p>Language</p>
+          <Dropdown />
         </a>
         <figure className="fig__logo-head">
           <Logo />
