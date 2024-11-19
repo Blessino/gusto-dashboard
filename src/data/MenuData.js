@@ -3,117 +3,117 @@
 export const Booking = [
   {
     title: 'Dashboard',
-    icon: '/public/dashboard.png' ,
+    icon: '/dashboard.png' ,
   },
   {
     title: 'Order',
-    icon: '/public/businessman.png',
+    icon: '/businessman.png',
   },
   {
     title: 'Groccery Stores',
-    icon: '/public/shopping-bag.png',
+    icon: '/shopping-bag.png',
   },
   {
     title: 'Accounting',
-    icon: '/public/budget.png',
+    icon: '/budget.png',
   },
 
   {
     title: 'Subscription',
-    icon: '/public/user-add.png',
+    icon: '/user-add.png',
   },
   {
     title: 'Customers',
-    icon: '/public/people.png',
+    icon: '/people.png',
   },
   {
     title: 'Report',
-    icon: '/public/statisctics.png',
+    icon: '/statisctics.png',
   },
   {
     title: 'Admin Services Area',
-    icon: '/public/people.png',
+    icon: '/people.png',
   },
   {
     title: 'Chat',
-    icon: '/public/cloud.png',
+    icon: '/cloud.png',
   },
 ];
 
 export const Settings = [
   {
     title: "Profile",
-    icon: "/public/user.png",
+    icon: "/user.png",
   },
   {
     title: "Customize",
-    icon: "/public/school-material.png",
+    icon: "/school-material.png",
   },
   {
     title: "Styling",
-    icon: "/public/brush.png",
+    icon: "/brush.png",
   },
   {
     title: "CMS",
-    icon: "/public/computer.png",
+    icon: "/computer.png",
   },
   {
     title: "Catalog",
-    icon: "/public/catalogue.png",
+    icon: "/catalogue.png",
   },
   {
     title: "Configurations",
-    icon: "/public/settings-config.png",
+    icon: "/settings-config.png",
   },
   {
     title: "Tax",
-    icon: "/public/tax-free.png",
+    icon: "/tax-free.png",
   },
   {
     title: "Payment Options",
-    icon: "/public/payment.png",
+    icon: "/payment.png",
   },
   {
     title: "Manage Delivery",
-    icon: "/public/delivery.png",
+    icon: "/delivery.png",
   },
   {
     title: "Manage Roles",
-    icon: "/public/user.png",
+    icon: "/user.png",
   },
   {
     title: "Cache Contorls",
-    icon: "/public/user.png",
+    icon: "/user.png",
   },
 ];
 
 export const Marketing = [
   {
     title: "Banners",
-    icon: "/public/brush.png",
+    icon: "/brush.png",
   },
   {
     title: "Promo Code",
-    icon: "/public/promo-code.png",
+    icon: "/promo-code.png",
   },
   {
     title: "Loyality Card",
-    icon: "/public/card.png",
+    icon: "/card.png",
   },
   {
     title: "Campaing",
-    icon: "/public/star.png",
+    icon: "/star.png",
   },
 ];
 
 export const Extra = [
   {
     title: "Tools",
-    icon: "/public/setting.png",
+    icon: "/setting.png",
   },
   {
     title: "DB Aduit Logs",
-    icon: "/public/tax-free.png",
+    icon: "/tax-free.png",
   },
 ];
 

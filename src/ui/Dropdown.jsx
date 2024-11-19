@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../ui/dropdown.css";
+import { HiChevronDown } from "react-icons/hi2";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ function Dropdown() {
   return (
     <div className="dropdown">
       <button onClick={toggleDropdown} className="dropdown-toggle">
-        en
+        en <HiChevronDown />
       </button>
       {isOpen && (
         <ul className="dropdown-menu">

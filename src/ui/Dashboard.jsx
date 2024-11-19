@@ -1,18 +1,15 @@
-import Calender from "./Calender";
-import Card from "./Card";
-import VerticalBar from "./VerticalBar";
-// import "./dashboard.css";
-
-
+import { LuCalendarDays } from 'react-icons/lu';
+import Card from './Card';
 
 function Dashboard() {
   return (
-    <div className="w-4 ">
-      <section className="flex justify-between items-center">
+    <div className=" ">
+      <section className="flex items-center justify-between">
         <h4>Dashboard</h4>
-        <div>
-          <Calender />
-          <span className="pi pi-calendar pi-icon "></span>
+        <div className="">
+          <span>
+            <LuCalendarDays />
+          </span>
           <span className="pi pi-cart-plus pi-icon"></span>
           <span className="pi pi-sync pi-icon"></span>
         </div>
@@ -22,47 +19,47 @@ function Dashboard() {
           <div className="card__body">
             <Card
               title="customer"
-              iconPath="./public/group.png"
+              iconPath="/group.png"
               count="0"
               reportNum="0%"
             />
             <Card
               title="Booking"
-              iconPath="./public/cart.png"
+              iconPath="/cart.png"
               count="0"
               reportNum="⬇50%"
             />
             <Card
               title="Grocery Store"
-              iconPath="./public/group.png"
+              iconPath="/group.png"
               count="25"
             />
           </div>
           <div className="card__body">
             <Card
               title="Total Revenue"
-              iconPath="./public/dollar-symbol.png"
+              iconPath="/dollar-symbol.png"
               countIcon="pi pi-indian-rupee"
               count="0"
               reportNum="⬇64.74%"
             />
             <Card
               title="Total Sold Product"
-              iconPath="./public/dollar-symbol.png"
+              iconPath="/dollar-symbol.png"
               count="0"
             />
             <Card
               title="Products"
-              iconPath="./public/trending.png"
+              iconPath="/trending.png"
               countIcon="pi pi-plus"
               count="0"
               reportNum="⬇64.74%"
             />
-            <Card title="Manager" iconPath="./public/group.png" count="0" />
+            <Card title="Manager" iconPath="/group.png" count="0" />
           </div>
         </section>
 
-        <VerticalBar />
+       
       </div>
     </div>
   );
