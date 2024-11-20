@@ -1,0 +1,13 @@
+
+.p-calendar input {
+  @apply  h-10 w-96 rounded-sm border-none border-gray-500 bg-gray-100 shadow-sm focus:outline-none;
+}
+
+/* .p-calendar .p-input-icon-right .p-inputtext {
+  @apply cursor-pointer rounded-full bg-blue-500 p-2 text-white;
+  @layer hover: transition duration-300 ease-in-out; 
+}
+
+.p-calendar .p-input-icon-right .p-datepicker-trigger .pi {
+  @apply text-xl focus:outline-none; 
+} */

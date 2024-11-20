@@ -1,8 +1,6 @@
 import { HiChevronDown, HiGlobeAlt } from 'react-icons/hi2';
 import Logo from '../ui/Logo';
 import Dropdown from './Dropdown';
-// import './header.css';
-// import './logo.css';
 
 function Header() {
   return (
@@ -33,7 +31,7 @@ function Header() {
           <p>Language</p>
           <Dropdown />
         </a>
-        <figure className="fig__logo-head">
+        <figure className="w-24 h-10">
           <Logo />
         </figure>
       </div>
