@@ -7,7 +7,7 @@ const DatePicker = () => {
 
   return (
     <div className="">
-      <div className="m-0cursor-pointer rounded-sm bg-blue-200 p-0 p-3 text-white">
+      <div className="m-0cursor-pointer rounded-sm bg-blue-200 p-0 text-white">
         <Calendar
           value={date}
           onChange={(e) => setDate(e.value)}

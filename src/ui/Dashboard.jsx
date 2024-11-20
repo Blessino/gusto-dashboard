@@ -3,6 +3,7 @@ import Card from './Card';
 import { BsCartPlus } from 'react-icons/bs';
 import { TfiReload } from 'react-icons/tfi';
 import DatePicker from './DatePicker';
+// import { Chart } from 'chart.js';
 
 function Dashboard() {
   return (
@@ -62,6 +63,9 @@ function Dashboard() {
             <Card title="Manager" iconPath="/group.png" count="0" />
           </div>
         </section>
+        <div>
+          {/* <Chart /> */}
+        </div>
 
       </div>
     </div>
