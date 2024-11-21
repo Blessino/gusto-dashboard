@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 
-export default function BasicDemo() {
+export default function Basic() {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     const data = {
-      labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+      labels: [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec',
+      ],
       datasets: [
         {
-          label: 'Sales',
-          data: [540, 325, 702, 620],
-          backgroundColor: [
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-          ],
-          borderColor: [
-            'rgb(255, 159, 64)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-          ],
+          label: 'Revenue Monthly',
+          data: [540, 325, 702, 620, 540, 325, 702, 620, 540, 325, 200, 100],
+          backgroundColor: ['rgba(39, 95, 218, 0.705)'],
+          borderColor: ['rgba(39, 95, 218, 0.705)'],
           borderWidth: 1,
         },
       ],
@@ -31,7 +34,7 @@ export default function BasicDemo() {
     const options = {
       scales: {
         y: {
-          beginAtZero: true,
+          beginAtZero: false,
         },
       },
     };

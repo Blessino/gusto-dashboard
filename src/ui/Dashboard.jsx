@@ -3,7 +3,8 @@ import Card from './Card';
 import { BsCartPlus } from 'react-icons/bs';
 import { TfiReload } from 'react-icons/tfi';
 import DatePicker from './DatePicker';
-// import { Chart } from 'chart.js';
+import BasicDemo from './Basic';
+import Line from './Line';
 
 function Dashboard() {
   return (
@@ -14,10 +15,10 @@ function Dashboard() {
         </div>
         <div className="flex items-center justify-center gap-2">
           <DatePicker />
-          <div className="rounded-sm bg-blue-200 p-3 text-white">
+          <div className="rounded-sm bg-blue-400 p-3 text-white">
             <TfiReload />
           </div>
-          <div className="rounded-sm bg-blue-200 p-3 text-white">
+          <div className="rounded-sm bg-blue-400 p-3 text-white">
             <BsCartPlus />
           </div>
         </div>
@@ -25,7 +26,7 @@ function Dashboard() {
 
       <div className="flex items-center justify-between">
         <section className="dash__body">
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <Card
               title="customer"
               iconPath="/group.png"
@@ -40,7 +41,7 @@ function Dashboard() {
             />
             <Card title="Grocery Store" iconPath="/group.png" count="25" />
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <Card
               title="Total Revenue"
               iconPath="/dollar-symbol.png"
@@ -63,10 +64,13 @@ function Dashboard() {
             <Card title="Manager" iconPath="/group.png" count="0" />
           </div>
         </section>
-        <div>
-          {/* <Chart /> */}
+        <div > 
+          <BasicDemo />
         </div>
+      </div>
 
+      <div>
+        <Line />
       </div>
     </div>
   );

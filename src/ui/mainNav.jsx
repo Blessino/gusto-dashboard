@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Booking, Settings, Marketing, Extra } from '../data/MenuData';
-// import '../ui/mainnav.css';
-//
+import "./mainnav.css"
+
 function MainNav() {
   return (
-    <nav className="fixed h-[80vh] overflow-x-hidden overflow-y-scroll text-gray-600 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-200">
+    <nav className="nav fixed h-[80vh] overflow-x-hidden overflow-y-scroll text-gray-600 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-200">
       <ul className="shadow-[0px_2px_5px_0px_rgba(203,213,225,0.2)]">
         <label className="text-[0.69rem] font-light uppercase text-gray-900">
           Booking
@@ -17,7 +17,9 @@ function MainNav() {
                 to={item.title}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
-                <img src={item.icon} alt={item.title} className="h-4 w-4" />
+                <span className="m-0 h-5 w-5 p-0">
+                  <img src={item.icon} alt={item.title} />
+                </span>
 
                 <span className="nav__list-title">{item.title}</span>
               </NavLink>
@@ -36,7 +38,7 @@ function MainNav() {
                 to={item.title}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
-                <span className="h-4 w-4">
+                <span className="m-0 h-5 w-5 p-0">
                   <img src={item.icon} alt={item.title} />
                 </span>
                 <span>{item.title}</span>
@@ -56,7 +58,7 @@ function MainNav() {
                 to={item.title}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
-                <span className="h-4 w-4">
+                <span className="m-0 h-5 w-5 p-0">
                   <img src={item.icon} alt={item.title} />
                 </span>
                 <span>{item.title}</span>
@@ -76,7 +78,7 @@ function MainNav() {
                 to={item.title}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
-                <span className="h-4 w-4">
+                <span className="m-0 h-5 w-5 p-0">
                   <img src={item.icon} alt={item.title} />
                 </span>
                 <span className="nav__item-title">{item.title}</span>
