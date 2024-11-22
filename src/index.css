@@ -1,10 +1,26 @@
 @layer tailwind-base, primereact, tailwind-utilities;
 
 @layer tailwind-base {
-    @tailwind base;
+  @tailwind base;
 }
 
 @layer tailwind-utilities {
-    @tailwind components;
-    @tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
+}
+
+@layer components {
+  .p-calendar input {
+    @apply h-10   border-none bg-gray-100 focus:outline-none cursor-pointer text-gray-600;
+  }
+
+  .p-calendar .p-icon {
+    @apply text-white;
+  }
+
+ 
+
+  .p-calendar .p-button {
+    @apply ml-2 rounded-sm bg-blue-400;
+  }
 }

@@ -1,6 +1,6 @@
-import { HiChevronDown, HiGlobeAlt } from 'react-icons/hi2';
+import { HiGlobeAlt } from 'react-icons/hi2';
 import Logo from '../ui/Logo';
-import Dropdown from './Dropdown';
+import {DropDown} from './Dropdown';
 
 function Header() {
   return (
@@ -29,7 +29,7 @@ function Header() {
           className="flex items-center justify-between gap-1 hover:text-teal-400"
         >
           <p>Language</p>
-          <Dropdown />
+          <DropDown />
         </a>
         <figure className="w-24 h-10">
           <Logo />

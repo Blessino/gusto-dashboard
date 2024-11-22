@@ -1,10 +1,10 @@
-import Card from './Card';
+import Card from '../ui/Card';
 
 import { BsCartPlus } from 'react-icons/bs';
 import { TfiReload } from 'react-icons/tfi';
-import DatePicker from './DatePicker';
-import BasicDemo from './Basic';
-import Line from './Line';
+import DatePicker from '../ui/DatePicker';
+import BasicDemo from '../ui/Basic';
+import Line from '../ui/Line';
 
 function Dashboard() {
   return (
@@ -14,7 +14,9 @@ function Dashboard() {
           <h4>Dashboard</h4>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <DatePicker />
+          <div className=" rounded-md border-gray-500 shadow-sm">
+            <DatePicker showIcon={true} />
+          </div>
           <div className="rounded-sm bg-blue-400 p-3 text-white">
             <TfiReload />
           </div>
@@ -64,7 +66,7 @@ function Dashboard() {
             <Card title="Manager" iconPath="/group.png" count="0" />
           </div>
         </section>
-        <div > 
+        <div>
           <BasicDemo />
         </div>
       </div>

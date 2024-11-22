@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-// import "../ui/dropdown.css";
 import { HiChevronDown } from 'react-icons/hi2';
+import { cities } from '../data/CityList';
 
-function Dropdown() {
+import { Dropdown } from 'primereact/dropdown';
+
+export function DropDown() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -25,4 +27,26 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+
+
+
+export  function DropdownCity() {
+  const [selectedCity, setSelectedCity] = useState(null);
+  console.log(cities );
+
+  return (
+    <div className="card justify-content-center flex">
+      <Dropdown
+        value={selectedCity}
+        onChange={(e) => setSelectedCity(e.value)}
+        options={cities}
+        
+        optionLabel="name"
+        placeholder="Select a City"
+        className="md:w-14rem w-full"
+        checkmark={true}
+        highlightOnSelect={false}
+      />
+    </div>
+  );
+}
