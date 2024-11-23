@@ -4,7 +4,7 @@ import {DropDown} from './Dropdown';
 
 function Header() {
   return (
-    <header>
+    <header className='h-10'>
       <div className="flex items-center justify-end gap-[2.5rem] p-2">
         <a
           href="#"

@@ -9,12 +9,12 @@ import Line from '../ui/Line';
 function Dashboard() {
   return (
     <div className="">
-      <section className="flex items-center justify-between uppercase">
+      <section className="flex items-center justify-between p-10 uppercase">
         <div className="size-10 font-medium">
           <h4>Dashboard</h4>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <div className=" rounded-md border-gray-500 shadow-sm">
+          <div className="rounded-md border-gray-500 shadow-sm">
             <DatePicker showIcon={true} />
           </div>
           <div className="rounded-sm bg-blue-400 p-3 text-white">

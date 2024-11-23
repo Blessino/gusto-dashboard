@@ -1,4 +1,4 @@
-export const cities = [
+export const vendor = [
     { name: 'New York', code: 'NY' },
     { name: 'Rome', code: 'RM' },
     { name: 'London', code: 'LDN' },

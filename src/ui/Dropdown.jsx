@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiChevronDown } from 'react-icons/hi2';
-import { cities } from '../data/CityList';
+import { vendor } from '../data/VendorLIst';
 
 import { Dropdown } from 'primereact/dropdown';
 
@@ -13,7 +13,10 @@ export function DropDown() {
 
   return (
     <div className="relative inline-block">
-      <button onClick={toggleDropdown} className="flex items-center justify-center cursor-pointer px-3 py-1">
+      <button
+        onClick={toggleDropdown}
+        className="flex cursor-pointer items-center justify-center px-3 py-1"
+      >
         <p>en</p> <HiChevronDown />
       </button>
       {isOpen && (
@@ -27,22 +30,17 @@ export function DropDown() {
   );
 }
 
-
-
-
-export  function DropdownCity() {
-  const [selectedCity, setSelectedCity] = useState(null);
-  console.log(cities );
+export function DropdownList() {
+  const [selectedVendor, setSelectedVendor] = useState(null);
 
   return (
     <div className="card justify-content-center flex">
       <Dropdown
-        value={selectedCity}
-        onChange={(e) => setSelectedCity(e.value)}
-        options={cities}
-        
+        value={selectedVendor}
+        onChange={(e) => setSelectedVendor(e.value)}
+        options={vendor}
         optionLabel="name"
-        placeholder="Select a City"
+        placeholder="Select Vendor"
         className="md:w-14rem w-full"
         checkmark={true}
         highlightOnSelect={false}
