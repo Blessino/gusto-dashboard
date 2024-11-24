@@ -8,7 +8,7 @@ function AppLayout() {
       <aside className="p-4">
         <Sidebar />
       </aside>
-      <div className="m-0 p-0">
+      <div className="m-0 p-0 w-">
         <Header />
         <main>
           <Outlet />

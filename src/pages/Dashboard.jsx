@@ -8,8 +8,8 @@ import Line from '../ui/Line';
 
 function Dashboard() {
   return (
-    <div className="">
-      <section className="flex items-center justify-between p-10 uppercase">
+    <div className="m-auto w-[96%]">
+      <section className="flex items-center justify-between py-10 uppercase">
         <div className="size-10 font-medium">
           <h4>Dashboard</h4>
         </div>
