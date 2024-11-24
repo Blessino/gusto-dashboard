@@ -14,7 +14,7 @@ function MainNav() {
           return (
             <li key={item.title} className="list-none">
               <NavLink
-                to={item.title}
+                to={item.path}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
                 <span className="m-0 h-5 w-5 p-0">
@@ -35,7 +35,7 @@ function MainNav() {
           return (
             <li key={item.title} className="list-none">
               <NavLink
-                to={item.title}
+                to={item.path}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
                 <span className="m-0 h-5 w-5 p-0">
@@ -53,7 +53,7 @@ function MainNav() {
         </label>
         {Marketing.map((item) => {
           return (
-            <li key={item.title} className="list-none">
+            <li key={item.path} className="list-none">
               <NavLink
                 to={item.title}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
@@ -75,7 +75,7 @@ function MainNav() {
           return (
             <li key={item.title} className="list-none">
               <NavLink
-                to={item.title}
+                to={item.path}
                 className="mx-1 my-2 flex items-center justify-start gap-2 px-4 py-2 transition-all duration-200 ease-in-out hover:translate-x-1 hover:cursor-pointer hover:rounded-md hover:bg-blue-100 hover:text-teal-400"
               >
                 <span className="m-0 h-5 w-5 p-0">

@@ -10,6 +10,7 @@ function Customers() {
         <div>
           <span className="flex items-center justify-center gap-2 text-xl">
             <FaUser />
+            <h2>24</h2>
           </span>
           <h6 className="text-gray-600">Active User Count</h6>
         </div>
@@ -18,14 +19,14 @@ function Customers() {
             <FaUserClock />
             <h2>324</h2>
           </span>
-          <h6>Active user count</h6>
+          <h6 className="text-gray-600">Active user count</h6>
         </div>
         <div>
           <span className="flex items-center justify-center gap-2 text-xl">
             <GrLogin />
             <h2>324</h2>
           </span>
-          <h6>Active user count</h6>
+          <h6 className="text-gray-600">Active user count</h6>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+
 import AppLayout from './ui/AppLayout';
+
 import Dashboard from './pages/Dashboard';
 import Order from './pages/Order';
 import Store from './pages/Store';
@@ -15,7 +17,7 @@ function App() {
             <Route index element={<Navigate replace to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="order" element={<Order />} />
-            <Route path="store" element={<Store />} />
+            <Route path="stores" element={<Store />} />
             <Route path="customers" element={<Customers />} />
             <Route path="profile" element={<Profile />} />
           </Route>
