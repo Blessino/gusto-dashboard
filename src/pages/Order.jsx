@@ -6,7 +6,7 @@ import { Button } from 'primereact/button';
 
 function Order() {
   return (
-    <div className="m-auto w-[96%]">
+    <div className="m-auto w-[96%] pt-4">
       <section className="m-auto flex items-center justify-between py-10">
         <div className="size-10 font-medium">
           <h4>Order</h4>

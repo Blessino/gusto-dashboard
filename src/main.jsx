@@ -2,9 +2,9 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { PrimeReactProvider } from 'primereact/api';
-import "primereact/resources/themes/saga-blue/theme.css"; // PrimeReact theme
-import "primereact/resources/primereact.min.css"; // Core PrimeReact CSS
-import "primeicons/primeicons.css"; // PrimeIcons
+import 'primereact/resources/themes/lara-light-indigo/theme.css'; // Choose your theme
+import 'primereact/resources/primereact.min.css'; // Core CSS
+import 'primeicons/primeicons.css'; // Icons
 
 import App from './App.jsx';
 

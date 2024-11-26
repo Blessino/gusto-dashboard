@@ -4,7 +4,7 @@ import { GrLogin } from 'react-icons/gr';
 
 function Customers() {
   return (
-    <div>
+    <div className="m-auto w-[96%] pt-4">
       <h1>Customers</h1>
       <div className="flex items-center justify-around">
         <div>
