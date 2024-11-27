@@ -34,7 +34,7 @@ export function DropdownList() {
   const [selectedVendor, setSelectedVendor] = useState(null);
 
   return (
-    <div className="card justify-content-center flex">
+    <div className=" justify-content-center flex">
       <Dropdown
         value={selectedVendor}
         onChange={(e) => setSelectedVendor(e.value)}

@@ -10,6 +10,9 @@
 }
 
 @layer utilities {
+  .card {
+    @apply mb-4  rounded-lg border-[1px] border-[#dfe7ef] bg-[#fff] p-8;
+  }
   .p-calendar input {
     @apply h-10 cursor-pointer border-none bg-gray-100 text-gray-600 focus:outline-none;
   }
@@ -23,6 +26,6 @@
   }
 
   .p-button-outlined {
-    @apply focus:outline-none focus-visible:outline-none outline-none;
+    @apply outline-none focus:outline-none focus-visible:outline-none;
   }
 }

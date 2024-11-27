@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
-import {cities} from "../data/VendorLIst"
+import { cities } from '../data/VendorLIst';
+import FileUploder from './Fileuploder';
 
 function ProfileForm() {
   const [value, setValue] = useState('');
-    const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedCity, setSelectedCity] = useState(null);
 
   return (
     <div>
       <section className="pt-4">
         <form>
+          <div>
+            <FileUploder />
+          </div>
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-2">
               <label htmlFor="name">Name</label>
@@ -56,7 +60,7 @@ function ProfileForm() {
                 className="h-8 rounded-sm border-[1.5px] border-gray-400"
               />
             </div>
-            <div className="flex flex-col gap-2 ">
+            <div className="flex flex-col gap-2">
               <label htmlFor="name">Country</label>
               <Dropdown
                 value={selectedCity}
