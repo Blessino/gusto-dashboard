@@ -8,9 +8,9 @@ import PendingOrder from '../ui/order/PendingOrder';
 import Ordered from '../ui/order/Ordered';
 
 function Order() {
-  const [activeComponent, setActiveComponent] = useState('home');
+  const [activeComponent, setActiveComponent] = useState('active');
 
-  const renderComponent = () => {
+  function renderComponent() {
     switch (activeComponent) {
       case 'active':
         return <ActiveOrder />;
@@ -21,7 +21,7 @@ function Order() {
       default:
         return <ActiveOrder />;
     }
-  };
+  }
 
   return (
     <div className="m-auto w-[96%] pt-4">
@@ -50,20 +50,43 @@ function Order() {
       </section>
       <section>
         <div>
-          <nav className="flex items-center justify-start gap-4">
+          <nav className="flex items-center justify-start gap-4 border-b-2 border-solid border-gray-300 pb-4">
             <button
               onClick={() => setActiveComponent('active')}
-              className="active:text-blue-400"
+              className={`pl-4 ${
+                activeComponent === 'active'
+                  ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
+                  : ' '
+              }`}
             >
               Active Order
             </button>
-            <button onClick={() => setActiveComponent('pending')}>
+            <button
+              onClick={() => {
+                setActiveComponent('pending');
+              }}
+              className={`${
+                activeComponent === 'pending'
+                  ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
+                  : ' '
+              }`}
+            >
               Pending Order
             </button>
-            <button onClick={() => setActiveComponent('order')}>
+            <button
+              onClick={() => setActiveComponent('order')}
+              className={`${
+                activeComponent === 'order'
+                  ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
+                  : ' '
+              }`}
+            >
               Order History
             </button>
           </nav>
+          <div>
+            
+          </div>
           <div>{renderComponent()}</div>
         </div>
       </section>

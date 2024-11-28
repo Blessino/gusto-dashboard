@@ -16,11 +16,8 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="order" element={<Order />}>
-              <Route path="pending" element={<Store />} />
-              <Route path="active" element={<Store />} />
-              <Route path="booking" element={<Store />} />
-            </Route>
+            <Route path="order" element={<Order />} />
+              
             <Route path="stores" element={<Store />} />
             <Route path="customers" element={<Customers />} />
             <Route path="profile" element={<Profile />} />
