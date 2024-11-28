@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { cities } from '../data/VendorLIst';
-import FileUploder from '../ui/FileUploder';
+import FileUploder from "./FileUploder"
+
 
 function ProfileForm() {
   const [value, setValue] = useState('');
