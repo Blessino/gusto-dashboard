@@ -6,8 +6,11 @@ export const ProductService = [
     description: 'Product Description',
     image: 'bamboo-watch.jpg',
     price: 65,
-    category: 'Accessories',
+    category: 'Accesseries',
+    date: '2024-011-28 14:55',
     quantity: 24,
+    address: 'Sector 28, Chandigarh, 160028, India',
+
     inventoryStatus: 'INSTOCK',
     rating: 5
 },

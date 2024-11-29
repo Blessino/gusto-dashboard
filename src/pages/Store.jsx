@@ -2,6 +2,7 @@ import React from 'react';
 import { BiSolidStore } from 'react-icons/bi';
 import { BsCreditCard2FrontFill } from 'react-icons/bs';
 import { MdLocalConvenienceStore } from 'react-icons/md';
+import ActiveStore from "../ui/store/ActiveStore"
 
 function Store() {
   return (
@@ -41,6 +42,8 @@ function Store() {
           </div>
         </div>
       </div>
+
+      <ActiveStore />
     </div>
   );
 }

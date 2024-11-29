@@ -53,7 +53,7 @@ function Order() {
           <nav className="flex items-center justify-start gap-4 border-b-2 border-solid border-gray-300 pb-4">
             <button
               onClick={() => setActiveComponent('active')}
-              className={`pl-4 ${
+              className={`pl-4 transition-colors duration-1000 ${
                 activeComponent === 'active'
                   ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
                   : ' '
@@ -65,7 +65,7 @@ function Order() {
               onClick={() => {
                 setActiveComponent('pending');
               }}
-              className={`${
+              className={`transition-colors duration-1000 ${
                 activeComponent === 'pending'
                   ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
                   : ' '
@@ -75,7 +75,7 @@ function Order() {
             </button>
             <button
               onClick={() => setActiveComponent('order')}
-              className={`${
+              className={`transition-all ease-in duration-1000 ${
                 activeComponent === 'order'
                   ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
                   : ' '
@@ -84,9 +84,7 @@ function Order() {
               Order History
             </button>
           </nav>
-          <div>
-            
-          </div>
+          <div></div>
           <div>{renderComponent()}</div>
         </div>
       </section>

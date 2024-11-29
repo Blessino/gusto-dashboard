@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Dropdown } from 'primereact/dropdown';
 import { cities } from '../data/VendorLIst';
-import FileUploder from "./FileUploder"
+import FileUploder from './FileUploder';
 
 
 function ProfileForm() {
@@ -22,7 +22,7 @@ function ProfileForm() {
               <InputText
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className="h-8 rounded-sm border-[1.5px] border-gray-400"
+                className="h-8 rounded-sm border-[1.5px] border-gray-400 "
               />
             </div>
             <div className="flex flex-col gap-2">
