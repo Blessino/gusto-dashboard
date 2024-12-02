@@ -18,7 +18,7 @@ export default function CheckboxRowSelectionDemo() {
       <img
         src={product.image}
         alt={product.name}
-        className="w-12 shadow-2 border-round"
+        className="shadow-2 border-round w-12"
       />
     );
   };
