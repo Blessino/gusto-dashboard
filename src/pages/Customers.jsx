@@ -20,9 +20,9 @@ function Customers() {
 
   return (
     <div className="m-auto w-[96%] pt-4">
-      <section>
+      <section className=''>
         <h1>Customers</h1>
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-around py-12">
           <div>
             <span className="flex items-center justify-center gap-2 text-xl">
               <FaUser />
