@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaUser, FaUserClock } from 'react-icons/fa';
 import { GrLogin } from 'react-icons/gr';
-import Active from '../ui/store/customer/Active';
-import InActive from '../ui/store/customer/InActive';
+import Active from '../ui/customer/Active';
+import InActive from '../ui/customer/InActive';
 
 function Customers() {
   const [activeComponent, setActiveComponent] = useState('active');
@@ -62,7 +62,7 @@ function Customers() {
             </button>
             <button
               onClick={() => {
-                setActiveComponent('Inactive');
+                setActiveComponent('inactive');
               }}
               className={`transition-colors duration-1000 ${
                 activeComponent === 'pending'

@@ -18,7 +18,7 @@ export default function DynamicColumnsDemo() {
 
   return (
     <div className="card">
-      <DataTable value={products} tableStyle={{ minWidth: '50rem' }} >
+      <DataTable value={products} tableStyle={{ minWidth: '50rem' }} size='small' >
         {columns.map((col) => (
           <Column key={col.id} field={col.field} header={col.header} />
         ))}

@@ -39,7 +39,8 @@ export default function CheckboxRowSelectionDemo() {
         selection={selectedProducts}
         onSelectionChange={(e) => setSelectedProducts(e.value)}
         dataKey="id"
-        // tableStyle={{ minWidth: '50rem' }}
+        tableStyle={{ minWidth: '50rem' }}
+        size='small'
       >
         <Column
           selectionMode="multiple"
