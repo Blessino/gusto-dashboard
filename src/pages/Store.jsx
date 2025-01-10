@@ -23,7 +23,7 @@ function Store() {
   return (
     <div className="m-auto w-[96%] pt-4">
       <section className="mb-4">
-        <div>
+        <div className="text-2xl font-normal text-slate-700 uppercase">
           <h1>Grocery Store</h1>
         </div>
         <div>

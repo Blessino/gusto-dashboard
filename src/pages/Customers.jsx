@@ -4,6 +4,7 @@ import { GrLogin } from 'react-icons/gr';
 import Active from '../ui/customer/Active';
 import InActive from '../ui/customer/InActive';
 
+
 function Customers() {
   const [activeComponent, setActiveComponent] = useState('active');
 
@@ -20,8 +21,8 @@ function Customers() {
 
   return (
     <div className="m-auto w-[96%] pt-4">
-      <section className=''>
-        <h1>Customers</h1>
+      <section className="">
+        <h2 className="text-2xl font-normal text-slate-700 uppercase">Customers</h2>
         <div className="flex items-center justify-around py-12">
           <div>
             <span className="flex items-center justify-center gap-2 text-xl">
@@ -65,7 +66,7 @@ function Customers() {
                 setActiveComponent('inactive');
               }}
               className={`transition-colors duration-1000 ${
-                activeComponent === 'pending'
+                activeComponent === 'inactive'
                   ? 'text-blue-500 underline decoration-blue-500 decoration-solid decoration-2 underline-offset-[22px]'
                   : ' '
               }`}

@@ -1,166 +1,186 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { ProductService } from '../../data/ProductService'; // Import the provided JSON data
-import { Rating } from 'primereact/rating';
-import { Button } from 'primereact/button';
-import { Tag } from 'primereact/tag';
-import { Toast } from 'primereact/toast';
+import React, { useState } from 'react';
+import { ProductService } from '../../data/ProductService';
+import {
+  useReactTable,
+  createColumnHelper,
+  flexRender,
+  getCoreRowModel,
+  getExpandedRowModel,
+  getFilteredRowModel,
+} from '@tanstack/react-table';
+import { FaCircleMinus, FaCirclePlus } from 'react-icons/fa6';
+import { DropdownList } from '../Dropdown';
 
-export default function RowExpansionDemo() {
-  const [products, setProducts] = useState([]);
-  const [expandedRows, setExpandedRows] = useState(null);
+const columnHelper = createColumnHelper();
 
-  // const toast = useRef(null);
-
-  useEffect(() => {
-    setProducts(ProductService);
-  }, []);
-
-  // const onRowExpand = (event) => {
-  //   toast.current.show({
-  //     severity: 'info',
-  //     summary: 'Product Expanded',
-  //     detail: event.data.name,
-  //     life: 3000,
-  //   });
-  // };
-
-  // const onRowCollapse = (event) => {
-  //   toast.current.show({
-  //     severity: 'success',
-  //     summary: 'Product Collapsed',
-  //     detail: event.data.name,
-  //     life: 3000,
-  //   });
-  // };
-
-  // const expandAll = () => {
-  //   let _expandedRows = {};
-  //   products.forEach((p) => (_expandedRows[`${p.id}`] = true));
-
-  //   setExpandedRows(_expandedRows);
-  // };
-
-  // const collapseAll = () => {
-  //   setExpandedRows(null);
-  // };
-
-  const formatCurrency = (value) => {
-    return value.toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
-  };
-
-  const priceBodyTemplate = (products) => {
-    return formatCurrency(products.price);
-  };
-
-  const allowExpansion = (products) => {
-    return products.length > 0;
-  };
-
-  const expand = () => {
-    if (allowExpansion) {
-      // products.forEach((p) => (_expandedRows[`${p.id}`] = true));
-      console.log();
-
-      setExpandedRows(products.id);
-    } else {
-      setExpandedRows(null);
-    }
-  };
-
-  const header = (
-    <div className="justify-content-end expand flex flex-wrap gap-2">
-      <Button
-        icon={expandedRows }
-        // onClick={`${icon ? 'pi pi-plus' : 'pi pi-minus'}`}
+const columns = [
+  columnHelper.accessor('Children', {
+    header: null,
+    cell: ({ row }) => {
+      return row.getCanExpand() ? (
+        <button
+          onClick={row.getToggleExpandedHandler()}
+          className="rounded-full border-4 border-white"
+        >
+          {row.getIsExpanded() ? (
+            <FaCircleMinus color="red" />
+          ) : (
+            <FaCirclePlus color="blue" />
+          )}
+        </button>
+      ) : (
+        ''
+      );
+    },
+  }),
+  columnHelper.accessor('id', {
+    id: 'id',
+    cell: (info) => info.getValue(),
+    header: () => <span className="flex items-center">#</span>,
+  }),
+  columnHelper.accessor('image', {
+    id: 'image',
+    cell: ({ getValue }) => (
+      <img
+        src={getValue()}
+        alt={getValue()}
+        className="h-10 w-10 rounded-full border-2"
       />
-      {/* <Button icon="pi pi-minus" onClick={collapseAll} text /> */}
-    </div>
-  );
+    ),
+    header: () => <span className="flex items-center">Image</span>,
+  }),
+  columnHelper.accessor('name', {
+    cell: (info) => (
+      <span className="text-blue-400 hover:text-blue-600">
+        {info.getValue()}
+      </span>
+    ),
+    header: () => <span className="flex items-center">Name</span>,
+  }),
+  columnHelper.accessor('address', {
+    header: () => <span className="flex items-center">Adress</span>,
+    cell: (info) => info.getValue(),
+  }),
+  columnHelper.accessor('date', {
+    header: () => <span className="flex items-center">Date</span>,
+    cell: (info) => info.getValue(),
+  }),
+  columnHelper.accessor('inventory', {
+    header: () => <span className="flex items-center">Inventory</span>,
+    cell: (info) => info.getValue(),
+  }),
+];
 
-  const rowExpansionTemplate = (rowData) => {
-    console.log(rowData);
-    return (
-      <div className="p-3">
-        <h5>Details for {rowData.name}</h5>
-        <div>
-          <p>
-            <strong>Price:</strong> {formatCurrency(rowData.price)}
-          </p>
-          <p>
-            <strong>Category:</strong> {rowData.category}
-          </p>
-          <p>
-            <strong>Description:</strong> {rowData.description}
-          </p>
-          <p>
-            <strong>Quantity:</strong> {rowData.quantity}
-          </p>
-          <p>
-            <strong>Address:</strong> {rowData.address}
-          </p>
-          <p>
-            <strong>Inventory Status:</strong> {rowData.inventoryStatus}
-          </p>
-          <p>
-            <strong>Rating:</strong> {rowData.rating} Stars
-          </p>
-          <p>
-            <strong>Date:</strong> {rowData.date}
-          </p>
-        </div>
-      </div>
-    );
-  };
+function InActive() {
+  const [data] = useState(() => [...ProductService]);
+  const [globalFilter, setglobalFilter] = useState('');
+
+  // Create the table instance
+  const table = useReactTable({
+    data,
+    columns,
+    state: {
+      globalFilter,
+    },
+    getCoreRowModel: getCoreRowModel(),
+
+    getExpandedRowModel: getExpandedRowModel(),
+    getRowCanExpand: (row) => !!row.original,
+
+    onGlobalFilterChange: setglobalFilter,
+    getFilteredRowModel: getFilteredRowModel(),
+  });
 
   return (
-    <div className="card">
-      {/* <Toast ref={toast} /> */}
-      <DataTable
-        value={products}
-        expandedRows={expandedRows} // Control the expanded rows using state
-        onRowToggle={(e) => setExpandedRows(e.value)} // Update state when row expands or collapses
-        // onRowExpand={onRowExpand}
-        // onRowCollapse={onRowCollapse}
-        // rowExpansionTemplate={rowExpansionTemplate}
-        dataKey="id"
-        tableStyle={{ minWidth: '60rem' }}
-        size="small"
-      >
-        <Column
-          
-          expander={allowExpansion}
-          body={header}
-          style={{ width: '5rem' }}
-        />
-        <Column field="name" header="Name" />
-        <Column
-          header="Image"
-          body={(product) => (
-            <img src={product.image} alt={product.name} width="64px" />
-          )}
-        />
-        <Column field="price" header="Price" body={priceBodyTemplate} />
-        <Column field="category" header="Category" />
-        <Column
-          field="rating"
-          header="Rating"
-          body={(product) => (
-            <Rating value={product.rating} readOnly cancel={false} />
-          )}
-        />
-        <Column
-          field="inventoryStatus"
-          header="Status"
-          body={(product) => (
-            <Tag value={product.inventoryStatus} severity="success" />
-          )}
-        />
-      </DataTable>
-    </div>
+    <>
+      <section className="">
+        <div className="flex items-center justify-end gap-60 border-b-2 p-2">
+          <span className="w-48">
+            <DropdownList />
+          </span>
+          <span>
+            <input
+              value={globalFilter}
+              onChange={(e) => setglobalFilter(e.target.value)}
+              placeholder="Search..."
+              className="rounded-sm border border-gray-300 py-2 pl-10 pr-4 focus:border-indigo-50 focus:ring-indigo-50"
+            />
+          </span>
+        </div>
+      </section>
+
+      <div className="mx-auto flex max-w-full flex-col pb-4 sm:px-2 lg:px-2">
+        <div className="overflow-x-auto bg-white">
+          <table className="min-w-full divide-y divide-gray-600">
+            <thead className="table-auto border-collapse border-b-2 border-gray-300">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <th
+                      key={header.id}
+                      className="px-4 py-2 text-left font-semibold text-gray-600 first:pr-0"
+                    >
+                      <div>
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext(),
+                        )}
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody className="divide-y divide-gray-200 bg-white">
+              {table.getRowModel().rows.map((row) => (
+                <React.Fragment key={row.id}>
+                  <tr className="odd:bg-blue-50">
+                    {row.getVisibleCells().map((cell) => (
+                      <td
+                        key={cell.id}
+                        className="px-4 py-4 text-left text-gray-600 first:pr-0"
+                      >
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext(),
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                  {row.getIsExpanded() && (
+                    <tr>
+                      <td colSpan={row.getVisibleCells().length}>
+                        <div className="w-fit">
+                          <div className="border-b px-2 py-4">
+                            <h5 className="inline">Address: </h5>
+                            <p className="inline text-sm">
+                              {row.original.address}
+                            </p>
+                          </div>
+                          <div className="border-b px-2 py-4">
+                            <h5 className="inline">Date: </h5>
+                            <p className="inline text-sm">
+                              {row.original.date}
+                            </p>
+                          </div>
+                          <div className="border-b px-2 py-4">
+                            <h5 className="inline">Name: </h5>
+                            <p className="inline text-sm">
+                              {row.original.name}
+                            </p>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </>
   );
 }
+
+export default InActive;

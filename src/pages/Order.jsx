@@ -26,8 +26,8 @@ function Order() {
   return (
     <div className="m-auto w-[96%] pt-4">
       <section className="m-auto flex items-center justify-between py-10">
-        <div className="size-10 font-medium">
-          <h4>Order</h4>
+        <div className="text-2xl font-normal text-slate-700">
+          <h2>ORDER</h2>
         </div>
         <div className="flex items-center justify-center gap-4">
           <div className="w-48 rounded-sm border-[1.5px] border-gray-300">

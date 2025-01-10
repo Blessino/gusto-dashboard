@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className="m-auto w-[96%]">
       <section className="flex items-center justify-between py-10 uppercase">
-        <div className="size-10 font-medium">
+        <div className="text-2xl font-normal text-slate-700 uppercase">
           <h4>Dashboard</h4>
         </div>
         <div className="flex items-center justify-center gap-2">

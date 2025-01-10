@@ -6,7 +6,7 @@ function Profile() {
   return (
     <div className="w-[75%] pl-8 pt-10">
       <div className="card">
-        <h1>PROFILE</h1>
+        <h1 className="text-2xl font-normal text-slate-700">PROFILE</h1>
 
         <section className="pt-10">
           <div className="flex items-center justify-between">
