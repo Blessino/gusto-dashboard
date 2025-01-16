@@ -22,25 +22,27 @@ function Customers() {
   return (
     <div className="m-auto w-[96%] pt-4">
       <section className="">
-        <h2 className="text-2xl font-normal text-slate-700 uppercase">Customers</h2>
+        <h2 className="text-2xl font-normal uppercase text-slate-700">
+          Customers
+        </h2>
         <div className="flex items-center justify-around py-12">
           <div>
             <span className="flex items-center justify-center gap-2 text-xl">
-              <FaUser />
+              <FaUser color=" #60a5fa" />
               <h2>24</h2>
             </span>
             <h6 className="text-gray-600">Active User Count</h6>
           </div>
           <div>
             <span className="flex items-center justify-center gap-2 text-xl">
-              <FaUserClock />
+              <FaUserClock color=" #60a5fa" />
               <h2>324</h2>
             </span>
             <h6 className="text-gray-600">Active user count</h6>
           </div>
           <div>
             <span className="flex items-center justify-center gap-2 text-xl">
-              <GrLogin />
+              <GrLogin color=" #60a5fa" />
               <h2>324</h2>
             </span>
             <h6 className="text-gray-600">Active user count</h6>
